@@ -19,6 +19,7 @@
     </head>
 
     <body>
+        @extends('layouts.nav')
         <div class="flex h-screen">
             <div class="m-auto w-80">
                 <div class="card-header mb-5 text-center font-bold text-xl">Log In</div>

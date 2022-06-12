@@ -18,8 +18,10 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
 
-    <body>
-        <div class="flex h-screen">
+    <body class="">
+        @extends('layouts.nav')
+
+        <div class="flex flex-col">
             <div class="m-auto w-80">
                 <div class="card-header mb-5 text-center font-bold text-xl">Sign Up</div>
 
