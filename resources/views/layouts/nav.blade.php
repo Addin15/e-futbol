@@ -100,7 +100,9 @@
         </div>
 
         <main class="pt-10">
-            @yield('content')
+            <div class="pt-8">
+                @yield('content')
+            </div>
         </main>
     </body>
 
