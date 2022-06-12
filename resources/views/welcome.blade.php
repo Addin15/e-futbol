@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>E-Futbol</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -57,7 +57,7 @@
                     </svg>
                 </button>
                 <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
-                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-3 md:mt-0 md:text-sm md:font-medium">
                         <!-- @auth
                         <a href="{{ url('/home') }}" class="">Home</a>
                         @else
@@ -68,14 +68,20 @@
                         @endif
                         @endauth -->
                         <li>
-                            <a href="{{ route('login') }}"
-                                class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                                aria-current="page">Login</a>
+                            <div class="border border-color-primary rounded-lg px-4 py-1">
+                                <a href="{{ route('register') }}"
+                                    class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign
+                                    Up</a>
+                            </div>
                         </li>
                         <li>
-                            <a href="{{ route('register') }}"
-                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Register</a>
+                            <div class="border border-color-primary rounded-lg px-4 py-1 bg-color-primary">
+                                <a href="{{ route('login') }}"
+                                    class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-white md:p-0 dark:text-white"
+                                    aria-current="page">Login</a>
+                            </div>
                         </li>
+
                     </ul>
                 </div>
             </div>
