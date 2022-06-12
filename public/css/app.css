@@ -634,42 +634,25 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
-.border-black {
+.border-color-primary {
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-color: rgb(33 41 234 / var(--tw-border-opacity));
 }
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
-.border-color-primary {
-  --tw-border-opacity: 1;
-  border-color: rgb(33 41 234 / var(--tw-border-opacity));
-}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-.bg-\[\#2129EA\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(33 41 234 / var(--tw-bg-opacity));
 }
 .bg-color-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(33 41 234 / var(--tw-bg-opacity));
 }
-.fill-color-primary {
-  fill: #2129EA;
-}
-.fill-\[2129EA\] {
-  fill: 2129EA;
-}
-.fill-\[\#2129EA\] {
-  fill: #2129EA;
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 .p-2 {
   padding: 0.5rem;
@@ -833,18 +816,6 @@ video {
     flex-direction: row;
   }
 
-  .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .md\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.75rem * var(--tw-space-x-reverse));
@@ -870,11 +841,6 @@ video {
 
   .md\:font-medium {
     font-weight: 500;
-  }
-
-  .md\:text-blue-700 {
-    --tw-text-opacity: 1;
-    color: rgb(29 78 216 / var(--tw-text-opacity));
   }
 
   .md\:text-white {
