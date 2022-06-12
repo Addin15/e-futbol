@@ -21,7 +21,7 @@
     <body class="">
         @extends('layouts.nav')
 
-        <div class="flex flex-col">
+        <div class="flex h-screen">
             <div class="m-auto w-80">
                 <div class="card-header mb-5 text-center font-bold text-xl">Sign Up</div>
 
