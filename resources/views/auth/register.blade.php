@@ -111,7 +111,8 @@
                         <div class="flex content-center mt-3">
                             <div class="m-auto">
                                 <div class="">Already have an account? <a
-                                        class="font-bold inline-block text-color-primary" href="#"> Log
+                                        class="font-bold inline-block text-color-primary" href="{{ route('login') }}">
+                                        Log
                                         In</a>
                                 </div>
 
