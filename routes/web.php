@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ArenaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/compare/{first}/{second}', [ArenaController::class, 'compare'])->name('compare');
