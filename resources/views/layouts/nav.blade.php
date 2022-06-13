@@ -78,7 +78,9 @@
                                         {{ Auth::user()->name }}
                                     </a>
 
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        <button type="submit">Logout</button>
                                         @csrf
                                     </form>
                         </div>

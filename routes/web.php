@@ -22,4 +22,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// Compare
 Route::get('/compare/{first}/{second}', [ArenaController::class, 'compare'])->name('compare');
+Route::get('/compare/{first}', [ArenaController::class, 'compare'])->name('compare');
+Route::get('/compare/', [ArenaController::class, 'compare'])->name('compare');

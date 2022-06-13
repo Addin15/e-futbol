@@ -18,7 +18,15 @@ return new class extends Migration
             $table->unsignedBigInteger('provider_id');
             $table->foreign('provider_id')->references('id')->on('providers');
             $table->string('arena_name');
-            $table->string('arena_address');
+            $table->string('number_field')->nullable();
+            $table->string('grass_type')->nullable();
+            $table->string('number_light')->nullable();
+            $table->string('subs_bench')->nullable();
+            $table->string('day_price')->nullable();
+            $table->string('night_price')->nullable();
+            $table->string('refferee')->nullable();
+            $table->string('spectators_seat')->nullable();
+            $table->string('arena_address')->nullable();
             $table->timestamps();
         });
     }
