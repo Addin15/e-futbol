@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="py-10 px-28">
+    <h1 class="font-bold text-4xl text-center mt-2 mb-20">Compare Arena</h1>
     <!-- Choose section -->
     <div class="grid grid-cols-3 justify-items-center mb-12">
         <div class="col-span-1">

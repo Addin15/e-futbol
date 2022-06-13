@@ -72,15 +72,15 @@
                                     </div>
                                 </li>
                                 @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
+                                <li class="flex">
+                                    <a class="mr-5 flex">Welcome, <div class="font-bold ml-2">{{ Auth::user()->name }}!
+                                        </div>
                                     </a>
 
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        <button type="submit">Logout</button>
+                                        <button type="submit"><img src="/icons/logout.png" alt="Logout"
+                                                class="w-5 h-5"></button>
                                         @csrf
                                     </form>
                         </div>
