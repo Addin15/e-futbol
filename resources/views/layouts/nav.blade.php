@@ -99,11 +99,15 @@
             </div>
         </div>
 
-        <main class="pt-10">
-            <div class="pt-8">
-                @yield('content')
-            </div>
-        </main>
+
+        <div class="pt-14 h-full scroll-smooth">
+            @yield('content')
+        </div>
+
+
+        <footer class="bg-color-primary h-52">
+
+        </footer>
     </body>
 
 </html>
