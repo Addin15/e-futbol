@@ -8,6 +8,29 @@
 
         </div>
 
+        <div class="flex-start grid grid-cols-5 w-90 p-5 justify-items-center mx-20 my-5 ">
+            <div class="bg-sky-50 rounded w-full h-full border-solid border-2 border-slate-900 mx-10 ">
+                <p class="text-center">Location</p>
+
+            </div>
+            <div class="bg-sky-50 rounded w-full h-full border-solid border-2 border-slate-900 ">
+                <p class="text-center">Date</p>
+
+            </div>
+            <div class="bg-sky-50 rounded w-full h-full border-solid border-2 border-slate-900 ">
+                <p class="text-center">Time</p>
+
+            </div>
+            <div class="bg-sky-50 rounded w-full h-full border-solid border-2 border-slate-900 ">
+                <p class="text-center">Location</p>
+
+            </div>
+            <div> <img class="object-cover w-10" src="icons/search.png" alt="dummy-image">
+            </div>
+
+
+        </div>
+
 
         <div class="grid grid-cols-4 p-2 justify-items-center  h-full w-screen my-10">
 
