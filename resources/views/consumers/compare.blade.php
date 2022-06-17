@@ -7,7 +7,7 @@
     <div class="grid grid-cols-3 justify-items-center mb-12">
         <div class="col-span-1">
             @if($first)
-            <button class="flex flex-auto border-solid border border-black px-4 py-2 w-44 m-auto">
+            <button id="changeFirst" class="flex flex-auto border-solid border border-black px-4 py-2 w-44 m-auto">
                 <img src="/icons/change.png" alt="Change Icon" class="h-5 w-5 mx-2">
                 <div class="text-center place-items-center">Change Arena</div>
             </button>
@@ -15,7 +15,7 @@
                 class="h-96 w-96 object-cover border-solid border-blue-500 border-2 mt-2" />
             <h6 class="text-center font-bold text-lg my-4">Radia Arena</h6>
             @else
-            <img src="/icons/add.png" alt="Second" class="h-48 w-48 object-cover cursor-pointer" onclick="" />
+            <img src="/icons/add.png" alt="Second" class="h-48 w-48 object-cover cursor-pointer" id="btnFirst" />
             @endif
         </div>
         <div class="col-span-1 self-center">
@@ -23,7 +23,7 @@
         </div>
         <div class="col-span-1 content-center flex flex-col justify-center">
             @if($second)
-            <button class="flex flex-auto border-solid border border-black px-4 py-2 w-44 m-auto">
+            <button id="changeSecond" class="flex flex-auto border-solid border border-black px-4 py-2 w-44 m-auto">
                 <img src="/icons/change.png" alt="Change Icon" class="h-5 w-5 mx-2">
                 <div class="text-center">Change Arena</div>
             </button>
@@ -31,9 +31,33 @@
                 class="h-96 w-96 object-cover border-solid border-blue-500 border-2 mt-2" />
             <h6 class="text-center font-bold text-lg my-4">Radia Arena</h6>
             @else
-            <img src="/icons/add.png" alt="Second" class="h-48 w-48 object-cover cursor-pointer" onclick="" />
+            <img src="/icons/add.png" alt="Second" class="h-48 w-48 object-cover cursor-pointer" id="btnSecond" />
             @endif
         </div>
+    </div>
+
+    <!-- Modal Select Arena -->
+    <!-- Modal content -->
+    <div id="selectArena" style="display: none;"
+        class="flex-row content-end bg-white px-8 py-4 self-center z-10 fixed flex h-2/5 w-1/2 bottom-1/3 left-1/4 border-2 border-solid rounded-2xl border-color-primary">
+
+        <!-- Modal content -->
+        <div class="modal-content m-auto">
+            <div class="close font-bold text-lg text-end">Close</div>
+            <input type="text" class="w-full h-8 self-center my-4" placeholder="Search...">
+        </div>
+        <select id="arenaSelector" name="arena" class="w-full mb-10" multiple>
+            @foreach ($all as $arena)
+            <option value="{{ $arena->id }}">{{ $arena->arena_name }}</option>
+            @endforeach
+        </select>
+
+        <div class="flex items-end">
+            <button id="doneselect" type="submit"
+                class="m-auto place-self-end bg-color-primary rounded-md px-4 py-1 text-white">Select</button>
+        </div>
+
+
     </div>
 
     <!-- Compare section -->
@@ -270,4 +294,68 @@
     </div>
 
 </div>
+
+<script>
+var currentFirst = 1;
+var currentSecond = 2;
+
+// Get the modal
+var modal = document.getElementById("selectArena");
+
+var selectFor = -1;
+
+// Get the button that opens the modal
+var btnFirst = document.getElementById("btnFirst");
+var changeFirst = document.getElementById("changeFirst");
+var btnSecond = document.getElementById("btnSecond");
+var changeSecond = document.getElementById("changeSecond");
+var btnSelect = document.getElementById("doneselect");
+
+var selector = document.getElementById("arenaSelector");
+
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+
+
+btnFirst.onclick = display(0);
+changeFirst.onclick = display(0);
+btnSecond.onclick = display(1);
+changeSecond.onclick = display(1);
+
+function display(val) {
+    selectFor = val;
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When click select
+btnSelect.onclick = function() {
+
+    var selected = selector.value;
+
+    alert(selectFor);
+
+    if (selectFor == 0) {
+        window.open('/compare/' + selected, "_self");
+    } else if (selectFor == 1) {
+        if (currentFirst == null) {
+            window.open('/compare/' + selected, "_self");
+        } else {
+            window.open('/compare/' + currentFirst + '/' + selected, "_self");
+        }
+    }
+}
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+</script>
 @endsection
