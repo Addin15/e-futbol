@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('order_id');
+            $table->foreign('order_id')->references('id')->on('orders');
             $table->unsignedBigInteger('arena_id');
             $table->foreign('arena_id')->references('id')->on('arenas');
             $table->unsignedBigInteger('reviewer_id');
