@@ -32,3 +32,5 @@ Route::get('/arenas/{arenaID}/field', [ArenaController::class, 'getFields']);
 
 Route::post('/fields/availability', [FieldController::class, 'getAvailability']);
 Route::post('/fields/book', [FieldController::class, 'bookFields']);
+
+Route::get('/arenas/{arenaID}/review', [ArenaController::class, 'getReviews']);

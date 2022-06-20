@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Arena;
 use App\Models\Field;
+use App\Models\Review;
+use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 
 class ArenaController extends Controller
@@ -64,6 +66,22 @@ class ArenaController extends Controller
         $arenaID = request('arenaID');
 
         $response = Field::where('arena_id', $arenaID)->get();
+
+        return response($response, 200);
+    }
+
+    public function getReviews(Request $request) {
+        $arenaID = request('arenaID');
+
+        $response = Review::where('arena_id', $arenaID)->get();
+
+        return response($response, 200);
+    }
+
+    public function getImages(Request $request) {
+        $arenaID = request('arenaID');
+
+        $response = Image::where('arena_id', $arenaID)->get();
 
         return response($response, 200);
     }
