@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Arena;
+use App\Models\Field;
 use Illuminate\Support\Facades\DB;
 
 class ArenaController extends Controller
@@ -55,6 +56,14 @@ class ArenaController extends Controller
         ->select('arenas.*', 'providers.provider_name')
         ->take(50)
         ->get();
+
+        return response($response, 200);
+    }
+
+    public function getFields(Request $request) {
+        $arenaID = request('arenaID');
+
+        $response = Field::where('arena_id', $arenaID)->get();
 
         return response($response, 200);
     }

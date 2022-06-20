@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArenaController;
+use App\Http\Controllers\FieldController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,7 @@ Route::get('/logout', [UserController::class, 'logout']);
 
 Route::get('/search/{q}', [ArenaController::class, 'findArena']);
 Route::get('/arenas/get', [ArenaController::class, 'getArenas']);
+Route::get('/arenas/{arenaID}/field', [ArenaController::class, 'getFields']);
+
+Route::post('/fields/availability', [FieldController::class, 'getAvailability']);
+Route::post('/fields/book', [FieldController::class, 'bookFields']);

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('booker_id');
             $table->foreign('booker_id')->references('id')->on('users');
+            $table->double('amount');
+            $table->datetime('datetime');
             $table->timestamps();
         });
     }
