@@ -27,6 +27,8 @@ return new class extends Migration
             $table->boolean('refferee')->nullable();
             $table->boolean('spectators_seat')->nullable();
             $table->string('arena_address')->nullable();
+            $table->double('latitude')->nullable();
+            $table->double('longitude')->nullable();
             $table->string('start_day_time');
             $table->string('end_day_time');
             $table->string('end_night_time');
