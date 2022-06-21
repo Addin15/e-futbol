@@ -34,12 +34,13 @@ class UserController extends Controller
             'email' => 'required|string|unique:users,email',
             'username' => 'required|string',
             'password' => 'required|string',
+            'role' => 'string',
         ]);
 
         $user = User::create([
             'name' => $fields['username'],
             'email' => $fields['email'],
-            'role' => 'consumer',
+            'role' => $fields['role'],
             'password' => bcrypt($fields['password']),
         ]);
         
